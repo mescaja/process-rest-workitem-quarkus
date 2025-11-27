@@ -19,23 +19,18 @@
 
 --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.ibm.bamoe</groupId>
-    <artifactId>bamoe-examples-parent</artifactId>
-    <version>9.3.0-ibm-0007</version>
-  </parent>
+  <groupId>org.acme</groupId>
   <artifactId>process-rest-workitem-quarkus</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
   <name>Kogito Example :: Process Service Rest WorkItem call with Quarkus</name>
   <description>Kogito service invocation using REST work item and Quarkus</description>
   <properties>
-    <quarkus-plugin.version>3.20.2.2</quarkus-plugin.version>
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
     <quarkus.platform.version>3.20.2.2</quarkus.platform.version>
     <kogito.bom.group-id>com.ibm.bamoe</kogito.bom.group-id>
     <kogito.bom.artifact-id>bamoe-bom</kogito.bom.artifact-id>
     <kogito.bom.version>9.3.0-ibm-0007</kogito.bom.version>
-    <version.org.kie.kogito>9.3.0-ibm-0007</version.org.kie.kogito>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -106,7 +101,7 @@
       <plugin>
         <groupId>${quarkus.platform.group-id}</groupId>
         <artifactId>quarkus-maven-plugin</artifactId>
-        <version>${quarkus-plugin.version}</version>
+        <version>${quarkus.platform.version}</version>
         <executions>
           <execution>
             <goals>
